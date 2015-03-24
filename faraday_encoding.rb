@@ -1,6 +1,7 @@
 require 'faraday'
 
 connection = Faraday.new do |c|
+  c.request :url_encoded
   c.response :logger
   c.adapter Faraday.default_adapter
 end
